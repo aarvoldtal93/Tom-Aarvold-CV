@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Aarvold - Interactive CV Assistant</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 2em; max-width: 800px; margin: auto; }
+        h1, h2 { color: #125e94; }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <p>This is an interactive page where you can ask my AI assistant questions about my CV. Please click the chat button in the bottom right corner to get started.</p>
+    <h2>Example Questions:</h2>
+    <ul>
+        <li>"What is your most recent job?"</li>
+        <li>"Tell me more about your certifications."</li>
+        <li>"What experience do you have in marketing automation?"</li>
+    </ul>
+
+    <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DgK000002eNeI',
+				'Public_CV_Chatbot',
+				'https://orgfarm-f3a5aa2f98-dev-ed.develop.my.site.com/ESWPublicCVChatbot1749468179279',
+				{
+					scrt2URL: 'https://orgfarm-f3a5aa2f98-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-f3a5aa2f98-dev-ed.develop.my.site.com/ESWPublicCVChatbot1749468179279/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
+</html>
